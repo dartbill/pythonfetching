@@ -1,11 +1,11 @@
 import requests
 from .repo import Repo
 
-URL = 'https://api.github.com/users/dartbill/repos'
+URL = ''
 
-def fetch_repos():
+def fetch_repos(username):
     '''call to Api'''
-    req = requests.get(URL)
+    req = requests.get(f'https://api.github.com/users/{username}/repos')
     for data in req.json():
         Repo(data)
     return data

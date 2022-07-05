@@ -7,8 +7,8 @@ class CLI():
         self._user_input = ""
 
     def start(self):
-        print(f'Repos are Coming...\n')
-        fetch_repos()
+        self._user_input = input(f'search a username \n')
+        fetch_repos(self._user_input)
         self.menu()
 
     def menu(self):
